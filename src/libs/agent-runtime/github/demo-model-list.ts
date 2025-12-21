@@ -14,7 +14,7 @@ import { LobeGithubAI } from './index';
 
 async function demonstrateModelListRetrieval() {
   console.log('GitHub Models List Retrieval Demo');
-  console.log('=' .repeat(50));
+  console.log('='.repeat(50));
   console.log();
 
   // Check if token is provided
@@ -72,7 +72,7 @@ async function demonstrateModelListRetrieval() {
     });
 
     console.log();
-    console.log('=' .repeat(50));
+    console.log('='.repeat(50));
     console.log('Demo completed successfully!');
     console.log();
     console.log('Key Points:');

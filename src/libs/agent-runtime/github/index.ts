@@ -40,7 +40,7 @@ export interface GithubModelCard {
  * 3. **Model Discovery**: Calls `client.models.list()` to fetch available models dynamically
  * 4. **Model Enhancement**: Merges API response with local model metadata to add:
  *    - Context window sizes
- * - Model capabilities (function calling, vision, reasoning)
+ *    - Model capabilities (function calling, vision, reasoning)
  *    - Enable/disable flags
  *
  * ## Model Capability Detection:
