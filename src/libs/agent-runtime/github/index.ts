@@ -96,6 +96,9 @@ export const LobeGithubAI = LobeOpenAICompatibleFactory({
     const { LOBE_DEFAULT_MODEL_LIST } = await import('@/config/aiModels');
 
     // Keywords for detecting model capabilities from descriptions
+    // NOTE: These are defined inline for clarity and proximity to usage.
+    // If capability detection becomes more complex, consider extracting to a
+    // shared configuration module.
     const functionCallKeywords = ['function', 'tool'];
     const visionKeywords = ['vision'];
     const reasoningKeywords = ['deepseek-r1', 'o1', 'o3'];

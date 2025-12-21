@@ -30,7 +30,7 @@ async function demonstrateModelListRetrieval() {
     console.log('1. Initializing GitHub Models runtime...');
     const runtime = new LobeGithubAI({ apiKey: githubToken });
     console.log('   ✓ Runtime initialized');
-    console.log(`   Base URL: ${runtime.baseURL}`);
+    console.log('   Base URL: https://models.inference.ai.azure.com');
     console.log();
 
     console.log('2. Fetching model list from GitHub Models API...');
@@ -60,7 +60,8 @@ async function demonstrateModelListRetrieval() {
     // Display first 5 models as examples
     models.slice(0, 5).forEach((model, index) => {
       console.log(`\n${index + 1}. ${model.displayName} (${model.id})`);
-      console.log(`   Description: ${model.description?.substring(0, 80)}...`);
+      const desc = model.description || 'No description available';
+      console.log(`   Description: ${desc.length > 80 ? desc.substring(0, 80) + '...' : desc}`);
       console.log(`   Capabilities:`);
       console.log(`     - Function Call: ${model.functionCall ? '✓' : '✗'}`);
       console.log(`     - Vision: ${model.vision ? '✓' : '✗'}`);
